@@ -1,0 +1,3 @@
+C:/Git/Micro-C/build/CMakeFiles/MicroC.dir
+C:/Git/Micro-C/build/CMakeFiles/edit_cache.dir
+C:/Git/Micro-C/build/CMakeFiles/rebuild_cache.dir
