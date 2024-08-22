@@ -53,3 +53,23 @@ Base steps:
 3. Интерпретатор (Interpreter)
 
 
+## Структура проекта
+
+Micro-C/
+│
+├── include/
+│   ├── lexer.h
+│   ├── parser.h
+│   ├── interpreter.h
+│   ├── ast.h
+│
+├── src/
+│   ├── lexer.cpp
+│   ├── parser.cpp
+│   ├── interpreter.cpp
+│   ├── ast.cpp
+│   └── main.cpp
+│
+└── CMakeLists.txt (или Makefile)
+
+
