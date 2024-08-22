@@ -71,7 +71,7 @@ Micro-C/
 │   └── main.cpp
 │
 └── CMakeLists.txt (или Makefile)
-'''
+
 
 ## Сборка
 (Win11, MinGW, CMake)
