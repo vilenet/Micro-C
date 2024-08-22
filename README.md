@@ -82,22 +82,22 @@ Micro-C/
 '''c
 mkdir build
 cd build
-'''
+
 
 -2. Выполните CMake для генерации файлов сборки:
 '''c
 cmake .. -G "MinGW Makefiles"
-'''
+
 
 3. Скомпилируйте проект:
 '''c
 cmake --build .
-'''
+
 
 4. Запуск программы:
 '''c
 MicroC.exe
-'''
+
 
 **В Visual Studio Code**
 1. Run CMake
@@ -111,11 +111,11 @@ MicroC.exe
 - Перейдите в папку build:
 '''c
 cd build
-'''
+
 - Запустите .exe файл:
 '''c
 ./MicroC.exe
-'''
+
 
 **В Visual Studio Code - способ 2: Настройка задачи в (tasks.json)**
 
@@ -145,7 +145,7 @@ cd build
         }
     ]
 }
-'''
+
 
 3. Запустите задачу:
    -Нажмите F1, введите Tasks: Run Task, выберите Run MicroC.
