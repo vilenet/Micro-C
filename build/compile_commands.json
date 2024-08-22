@@ -4,5 +4,11 @@
   "command": "C:/msys64/mingw64/bin/c++.exe  @CMakeFiles/MicroC.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles/MicroC.dir/src/main.cpp.obj -c C:/Git/Micro-C/src/main.cpp",
   "file": "C:/Git/Micro-C/src/main.cpp",
   "output": "CMakeFiles/MicroC.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Git/Micro-C/build",
+  "command": "C:/msys64/mingw64/bin/c++.exe  @CMakeFiles/MicroC.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles/MicroC.dir/src/input_processor.cpp.obj -c C:/Git/Micro-C/src/input_processor.cpp",
+  "file": "C:/Git/Micro-C/src/input_processor.cpp",
+  "output": "CMakeFiles/MicroC.dir/src/input_processor.cpp.obj"
 }
 ]

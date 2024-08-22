@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Git/Micro-C/src/input_processor.cpp" "CMakeFiles/MicroC.dir/src/input_processor.cpp.obj" "gcc" "CMakeFiles/MicroC.dir/src/input_processor.cpp.obj.d"
   "C:/Git/Micro-C/src/main.cpp" "CMakeFiles/MicroC.dir/src/main.cpp.obj" "gcc" "CMakeFiles/MicroC.dir/src/main.cpp.obj.d"
   )
 

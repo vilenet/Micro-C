@@ -84,18 +84,35 @@ CMakeFiles/MicroC.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MicroC.dir/src/main.cpp.s"
 	C:/msys64/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Git/Micro-C/src/main.cpp -o CMakeFiles/MicroC.dir/src/main.cpp.s
 
+CMakeFiles/MicroC.dir/src/input_processor.cpp.obj: CMakeFiles/MicroC.dir/flags.make
+CMakeFiles/MicroC.dir/src/input_processor.cpp.obj: CMakeFiles/MicroC.dir/includes_CXX.rsp
+CMakeFiles/MicroC.dir/src/input_processor.cpp.obj: C:/Git/Micro-C/src/input_processor.cpp
+CMakeFiles/MicroC.dir/src/input_processor.cpp.obj: CMakeFiles/MicroC.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Git/Micro-C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MicroC.dir/src/input_processor.cpp.obj"
+	C:/msys64/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroC.dir/src/input_processor.cpp.obj -MF CMakeFiles/MicroC.dir/src/input_processor.cpp.obj.d -o CMakeFiles/MicroC.dir/src/input_processor.cpp.obj -c C:/Git/Micro-C/src/input_processor.cpp
+
+CMakeFiles/MicroC.dir/src/input_processor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MicroC.dir/src/input_processor.cpp.i"
+	C:/msys64/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:/Git/Micro-C/src/input_processor.cpp > CMakeFiles/MicroC.dir/src/input_processor.cpp.i
+
+CMakeFiles/MicroC.dir/src/input_processor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MicroC.dir/src/input_processor.cpp.s"
+	C:/msys64/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Git/Micro-C/src/input_processor.cpp -o CMakeFiles/MicroC.dir/src/input_processor.cpp.s
+
 # Object files for target MicroC
 MicroC_OBJECTS = \
-"CMakeFiles/MicroC.dir/src/main.cpp.obj"
+"CMakeFiles/MicroC.dir/src/main.cpp.obj" \
+"CMakeFiles/MicroC.dir/src/input_processor.cpp.obj"
 
 # External object files for target MicroC
 MicroC_EXTERNAL_OBJECTS =
 
 MicroC.exe: CMakeFiles/MicroC.dir/src/main.cpp.obj
+MicroC.exe: CMakeFiles/MicroC.dir/src/input_processor.cpp.obj
 MicroC.exe: CMakeFiles/MicroC.dir/build.make
 MicroC.exe: CMakeFiles/MicroC.dir/linkLibs.rsp
 MicroC.exe: CMakeFiles/MicroC.dir/objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:/Git/Micro-C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable MicroC.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:/Git/Micro-C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable MicroC.exe"
 	"C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/MicroC.dir/objects.a
 	C:/msys64/mingw64/bin/ar.exe qc CMakeFiles/MicroC.dir/objects.a @CMakeFiles/MicroC.dir/objects1.rsp
 	C:/msys64/mingw64/bin/c++.exe -g -Wl,--whole-archive CMakeFiles/MicroC.dir/objects.a -Wl,--no-whole-archive -o MicroC.exe -Wl,--out-implib,libMicroC.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/MicroC.dir/linkLibs.rsp

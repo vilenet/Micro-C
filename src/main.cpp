@@ -1,7 +1,7 @@
-#include <iostream>
+#include "input_processor.h"
 
-int main()
-{
-    std::cout << "Test Micro-C\n";
+int main() {
+    InputProcessor inputProcessor;
+    inputProcessor.run();
     return 0;
 }

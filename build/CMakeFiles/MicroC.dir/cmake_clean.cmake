@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/MicroC.dir/src/input_processor.cpp.obj"
+  "CMakeFiles/MicroC.dir/src/input_processor.cpp.obj.d"
   "CMakeFiles/MicroC.dir/src/main.cpp.obj"
   "CMakeFiles/MicroC.dir/src/main.cpp.obj.d"
   "MicroC.exe"

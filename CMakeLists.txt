@@ -8,6 +8,7 @@ include_directories(include)
 
 add_executable(MicroC
     src/main.cpp
+    src/input_processor.cpp
     #src/lexer.cpp
     #src/parser.cpp
     #src/interpreter.cpp

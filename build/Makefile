@@ -129,6 +129,30 @@ MicroC/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroC.dir/build.make CMakeFiles/MicroC.dir/build
 .PHONY : MicroC/fast
 
+src/input_processor.obj: src/input_processor.cpp.obj
+.PHONY : src/input_processor.obj
+
+# target to build an object file
+src/input_processor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroC.dir/build.make CMakeFiles/MicroC.dir/src/input_processor.cpp.obj
+.PHONY : src/input_processor.cpp.obj
+
+src/input_processor.i: src/input_processor.cpp.i
+.PHONY : src/input_processor.i
+
+# target to preprocess a source file
+src/input_processor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroC.dir/build.make CMakeFiles/MicroC.dir/src/input_processor.cpp.i
+.PHONY : src/input_processor.cpp.i
+
+src/input_processor.s: src/input_processor.cpp.s
+.PHONY : src/input_processor.s
+
+# target to generate assembly for a file
+src/input_processor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroC.dir/build.make CMakeFiles/MicroC.dir/src/input_processor.cpp.s
+.PHONY : src/input_processor.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MicroC"
+	@echo "... src/input_processor.obj"
+	@echo "... src/input_processor.i"
+	@echo "... src/input_processor.s"
 	@echo "... src/main.obj"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

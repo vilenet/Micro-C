@@ -63,13 +63,16 @@ Micro-C/
 │   ├── parser.h
 │   ├── interpreter.h
 │   ├── ast.h
+│   ├── input_processor.h
 │
 ├── src/
 │   ├── lexer.cpp
 │   ├── parser.cpp
 │   ├── interpreter.cpp
 │   ├── ast.cpp
+│   ├── input_processor.cpp
 │   └── main.cpp
 │
-└── CMakeLists.txt (или Makefile)
+└── CMakeLists.txt
+
 '''
