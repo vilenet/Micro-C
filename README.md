@@ -54,7 +54,8 @@ Base steps:
 
 
 ## Структура проекта
- ```c
+
+ ```bash
 Micro-C/
 │
 ├── include/
@@ -71,33 +72,34 @@ Micro-C/
 │   └── main.cpp
 │
 └── CMakeLists.txt (или Makefile)
-
+'''
 
 ## Сборка
-(Win11, MinGW, CMake)
+
+### (Win11, MinGW, CMake)
 
 **В Терминале**
 
 1. Выполните команду для создания отдельной директории для сборки:
-'''c
-mkdir build
-cd build
+   ```bash
+   mkdir build
+   cd build
+'''
 
-
--2. Выполните CMake для генерации файлов сборки:
-'''c
+2. Выполните CMake для генерации файлов сборки:
+'''bash
 cmake .. -G "MinGW Makefiles"
-
+'''
 
 3. Скомпилируйте проект:
-'''c
+'''bash
 cmake --build .
-
+'''
 
 4. Запуск программы:
 '''c
 MicroC.exe
-
+'''
 
 **В Visual Studio Code**
 1. Run CMake
@@ -109,13 +111,13 @@ MicroC.exe
 3. Execute
 - Запустить Терминал - нажмите Ctrl + '
 - Перейдите в папку build:
-'''c
+'''bash
 cd build
 
 - Запустите .exe файл:
-'''c
+'''bash
 ./MicroC.exe
-
+'''
 
 **В Visual Studio Code - способ 2: Настройка задачи в (tasks.json)**
 
@@ -123,7 +125,7 @@ cd build
    -В меню выберите Terminal -> Configure Tasks -> Create tasks.json file from template -> Others.
 
 2. Добавьте задачу для запуска .exe файла:
-'''c
+'''bash
 {
     "version": "2.0.0",
     "tasks": [
@@ -145,7 +147,7 @@ cd build
         }
     ]
 }
-
+'''
 
 3. Запустите задачу:
    -Нажмите F1, введите Tasks: Run Task, выберите Run MicroC.
