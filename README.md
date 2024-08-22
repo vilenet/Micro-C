@@ -54,7 +54,7 @@ Base steps:
 
 
 ## Структура проекта
-
+ ```c
 Micro-C/
 │
 ├── include/
@@ -71,5 +71,5 @@ Micro-C/
 │   └── main.cpp
 │
 └── CMakeLists.txt (или Makefile)
-
+'''
 
