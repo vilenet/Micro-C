@@ -48,7 +48,7 @@ cd build
    -В меню выберите Terminal -> Configure Tasks -> Create tasks.json file from template -> Others.
 
 2. Добавьте задачу для запуска .exe файла:
-'''bash
+'''c
 {
     "version": "2.0.0",
     "tasks": [
