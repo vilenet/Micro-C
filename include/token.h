@@ -29,7 +29,7 @@ enum ETokenType {
     CHAR,
     BOOL,
     RETURN,
-    // Add other standard C/C++ keywords as needed like 'if', 'for', 'while', 'switch', 'case', etc.
+    // Add other standard C keywords as needed like 'if', 'for', 'while', 'switch', 'case', etc.
 
     // Default:
     UNKNOWN // Covering any unrecognized tokens

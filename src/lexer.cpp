@@ -2,7 +2,7 @@
 #include <cctype>
 #include <iostream>
 
-Lexer::Lexer(const std::string& src) : source(src) {
+CLexer::CLexer(const std::string& strSource) : m_strSource(strSource) {
     KeyWords = {
         {"int",    ETokenType::INT},
         {"char",   ETokenType::CHAR},
@@ -11,19 +11,19 @@ Lexer::Lexer(const std::string& src) : source(src) {
     };
 }
 
-std::vector<SToken> Lexer::tokenize() {
-    while (current < source.length()) {
-        start = current;
+std::vector<SToken> CLexer::tokenize() {
+    while (m_szCurrent < m_strSource.length()) {
+        m_szStart = m_szCurrent;
         scanToken();
     }
-    return tokens;
+    return m_vecTokens;
 }
 
-void Lexer::addToken(ETokenType type, const std::string& value) {
-    tokens.push_back(SToken(type, value));
+void CLexer::addToken(ETokenType type, const std::string& value) {
+    m_vecTokens.push_back(SToken(type, value));
 }
 
-void Lexer::scanToken() {
+void CLexer::scanToken() {
     char c = advance();
     switch (c) {
     case '(': addToken(LEFT_PAREN, "("); break;
@@ -50,44 +50,44 @@ void Lexer::scanToken() {
     }
 }
 
-char Lexer::advance() {
-    return source[current++];
+char CLexer::advance() {
+    return m_strSource[m_szCurrent++];
 }
 
-void Lexer::identifier() {
+void CLexer::identifier() {
     while (isalnum(peek()) || peek() == '_') advance();
-    std::string text = source.substr(start, current - start);
+    std::string text = m_strSource.substr(m_szStart, m_szCurrent - m_szStart);
     addToken(keyword(text), text);
 }
 
-char Lexer::peek() {
-    if (current >= source.length()) return '\0';
-    return source[current];
+char CLexer::peek() {
+    if (m_szCurrent >= m_strSource.length()) return '\0';
+    return m_strSource[m_szCurrent];
 }
 
-char Lexer::peekNext() {
-    if (current + 1 >= source.length()) return '\0';
-    return source[current + 1];
+char CLexer::peekNext() {
+    if (m_szCurrent + 1 >= m_strSource.length()) return '\0';
+    return m_strSource[m_szCurrent + 1];
 }
 
-void Lexer::number() {
+void CLexer::number() {
     while (isdigit(peek())) advance();
-    addToken(NUMBER, source.substr(start, current - start));
+    addToken(NUMBER, m_strSource.substr(m_szStart, m_szCurrent - m_szStart));
 }
 
-void Lexer::string() {
-    while (peek() != '\"' && current < source.length()) {
+void CLexer::string() {
+    while (peek() != '\"' && m_szCurrent < m_strSource.length()) {
         advance();
     }
-    if (current >= source.length()) {
+    if (m_szCurrent >= m_strSource.length()) {
         std::cerr << "Unterminated string." << std::endl;
         return;
     }
     advance(); // Consume the closing quote
-    addToken(STRING, source.substr(start + 1, current - start - 2));
+    addToken(STRING, m_strSource.substr(m_szStart + 1, m_szCurrent - m_szStart - 2));
 }
 
-ETokenType Lexer::keyword(const std::string& text) {
+ETokenType CLexer::keyword(const std::string& text) {
     if (KeyWords.find(text) != KeyWords.end()) {
         return KeyWords[text];
     }

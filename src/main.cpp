@@ -4,7 +4,7 @@
 int main() 
 {
     std::string source = "int main(){ int var = 10; printf(\"variable var is: %d\", var); }";
-    Lexer lexer(source);
+    CLexer lexer(source);
     std::vector<SToken> tokens = lexer.tokenize();
 
     for (const auto& token : tokens) {

@@ -6,13 +6,12 @@
 #include <unordered_map>
 #include "token.h"
 
-class Lexer {
+class CLexer {
 private:
-    std::string source;
-    std::vector<SToken> tokens;
-    size_t start = 0;
-    size_t current = 0;
-    size_t line = 1;
+    std::string m_strSource;
+    std::vector<SToken> m_vecTokens;
+    size_t m_szStart = 0;
+    size_t m_szCurrent = 0;
     std::unordered_map<std::string, ETokenType> KeyWords;
 
     void addToken(ETokenType type, const std::string& value);
@@ -24,9 +23,9 @@ private:
     char peek();
     char peekNext();
     ETokenType keyword(const std::string& text);
-    
+
 public:
-    explicit Lexer(const std::string& source);
+    explicit CLexer(const std::string& source);
     std::vector<SToken> tokenize();
 
 };
