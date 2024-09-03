@@ -1,5 +1,6 @@
 # Micro-C Interpreter
 
+
 ## Реализовать минимальный функционал:
 
 1. **Основные типы данных:**
@@ -47,10 +48,72 @@
 
 ## Реализация
 
-Base steps:
-1. Лексический анализатор (Lexer)
+Основные части интерпретатора:
+
+1. Лексический анализатор (Lexer) -> возврыщает набор токенов
 2. Синтаксический анализатор (Parser)
 3. Интерпретатор (Interpreter)
+
+
+Лексический анализатор (Lexer)
+
+Отбрасывание комментарием и пробельных символов
+Отделение токенов друг от друга
+
+           ________      Токен     _____________
+Source     |       |-------------->| Syntax     |
+Code   --> | Lexer |               | Analizator |---> К семантическому анализатору
+           |_______|<--------------|___________ |
+                   |   getNextToken |    
+                   |                |
+                   |     ___________|
+                   |----| Табдица   |
+                        |  Символов |  
+                        |___________|   
+
+
+Токен типы:
+                             
+1 Keywords:                 [int, return, if, while, for, void, char]  зарезервированные слова языка
+2 Identifiers:              [main, varName, myFunction ]  задаются программистом 
+3 Literals:    
+  [
+   Integer literals:        [10, 0, -5, 0xFF]
+   Floating-point literals: [3.14, -0.001, 2.0e10]
+   Character literals:      ['a', '\n']
+   String literals:         ["Hello, World!", "C programming"]
+  ]
+4 Operators:
+  [
+   Arithmetic operators:    [+ -  *  /  %] 
+   Assignment operators:    [=, +=, -=, *=, /=, %=]
+   Logical operators:       [&& (логическое И), || (логическое ИЛИ), ! (логическое НЕ)]
+   Comparison operators:    [==, !=, <, >, <=, >=.]
+   Bitwise operators:       [&, |, ^, ~, <<, >>.]
+   Unary operators:         [++ (инкремент), -- (декремент), & (адрес), * (разыменование указателя).]
+  ]
+5 Separators:
+  [
+   Comma:           [,] — разделяет элементы списка (например, параметры функции).
+   Semicolon:       [;] — завершает выражение или оператор.
+   Curly braces:    [{}], которые используются для определения блоков кода.
+   Parentheses:     [()] — используются для группировки выражений и вызова функций.
+   Square brackets: [[]] — используются для определения массивов и доступа к элементам массива.
+  ]
+6 Comments:
+  [
+   Single-line comments: [//]   начинаются с // и продолжаются до конца строки.
+   Multi-line comments:  [/**/] заключаются между /* и */.
+  ]
+7 Preprocessor directives: 
+  [
+   [#include]         — включение заголовочных файлов.
+   [#define]          — определение макросов.
+   [#ifdef], [#endif] — условная компиляция.
+  ]
+
+
+  Оставим для простоты только типы токенов:
 
 
 ## Структура проекта
@@ -59,17 +122,19 @@ Base steps:
 Micro-C/
 │
 ├── include/
+|   ├── token.h
 │   ├── lexer.h
 │   ├── parser.h
 │   ├── interpreter.h
-│   ├── ast.h
+│   ├── abstract_syntax_tree.h
 │   ├── input_processor.h
 │
 ├── src/
+|   ├── token.cpp
 │   ├── lexer.cpp
 │   ├── parser.cpp
 │   ├── interpreter.cpp
-│   ├── ast.cpp
+│   ├── abstract_syntax_tree.cpp
 │   ├── input_processor.cpp
 │   └── main.cpp
 │
