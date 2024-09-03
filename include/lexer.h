@@ -3,13 +3,10 @@
 
 #include <string>
 #include <vector>
+#include <unordered_map>
 #include "token.h"
 
 class Lexer {
-public:
-    explicit Lexer(const std::string& source);
-    std::vector<SToken> tokenize();
-
 private:
     std::string source;
     std::vector<SToken> tokens;
@@ -27,6 +24,11 @@ private:
     char peek();
     char peekNext();
     ETokenType keyword(const std::string& text);
+    
+public:
+    explicit Lexer(const std::string& source);
+    std::vector<SToken> tokenize();
+
 };
 
 
